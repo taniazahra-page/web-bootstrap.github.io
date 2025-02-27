@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tania Zahra - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        #sidebar {
+            width: 250px;
+            min-width: 250px;
+            min-height: 100vh;
+            background: #76bbff;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #f981e5;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            background-color: #f981e5;
+        }
+
+
+
+        .sidebar-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar-link:hover {
+            background: #f981e5;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar-link i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            min-height: 100vh;
+            transition: all 0.3s;
+        }
+
+        #sidebarCollapse {
+            position: fixed;
+            width: fit-content;
+            top: 10px;
+            right: 20px;
+            z-index: 999;
+            background: #76bbff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #sidebarCollapse.active {
+            right: 20px;
+            width: auto;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            height: 10px;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #sidebarCollapse.active {
+                left: 270px;
+            }
+        }
+
+        .btn-primary {
+            background-color: #76bbff;
+            border-color: #76bbff;
+        }
+
+        .btn-primary:hover {
+            background-color: #f981e5;
+            border-color: #f981e5;
+        }
+
+        .text-muted {
+            color: #000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="sidebarCollapse" class="active">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <div class="profile-image"> <img src="assets/images/foto_tania.jpg" alt="Foto Tania"
+                        style="max-width: 100%; height: auto;"> </div>
+                <h4>Tania Zahra Maharani</h4>
+                <p class="text-muted">Cloud Operation</p>
+
+
+            </div>
+
+            <div class="list-group list-group-flush">
+                <a href="#about" class="sidebar-link">
+                    <i class="fas fa-user"></i>About
+                </a>
+                <a href="#portfolio" class="sidebar-link">
+                    <i class="fas fa-briefcase"></i>Portfolio
+                </a>
+                <a href="#contact" class="sidebar-link">
+                    <i class="fas fa-envelope"></i>Contact
+                </a>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Rest of your existing content sections here -->
+            <section id="about" class="mb-5">
+                <h2 class="mb-4">About Me</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Hallo! saya Tania dari kelas 11 di SMK Telkom Malang dengan expertise
+                            Cloud Operation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="mb-5">
+                <h2 class="mb-4">My Projects</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="portfolio-image"></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Project 1</h5>
+                                <p class="card-text">Ini adalah project html pertama saya di kelas 10.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- section contact -->
+                    <section id="contact" class="mb-5">
+                        <h2 class="mb-4">Contact</h2>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="portfolio-image"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Email</h5>
+                                        <p class="card-text">taniazahra053@gmailcom</p>
+                                        <a href="https://mail.google.com/mail" class="btn btn-primary"
+                                            target="_blank">Try contact</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="portfolio-image"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">LinkedIn</h5>
+                                        <p class="card-text">https://rb.gy/2zq1ku</p>
+                                        <a href="https://www.linkedin.com/in/tania-zahra-maharani-93a347265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                            class="btn btn-primary" target="_blank">Try contact</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="portfolio-image"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Github</h5>
+                                        <p class="card-text">https://github.com/taniazahra-page</p>
+                                        <a href="https://github.com/taniazahra-page" class="btn btn-primary">Try
+                                            contact</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more portfolio items as needed -->
+                </div>
+            </section>
+
+            <!-- Rest of your sections -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarCollapse = document.getElementById('sidebarCollapse');
+            const sidebar = document.getElementById('sidebar');
+
+            sidebarCollapse.addEventListener('click', function () {
+                sidebar.classList.toggle('active');
+                sidebarCollapse.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
